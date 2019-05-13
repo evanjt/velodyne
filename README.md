@@ -1,6 +1,12 @@
 # Velodyne Lidar Python Library
 
-This code currently supports model HDL 64E S2 only.
+This code is adapted from the original repository at <https://github.com/esrlabs/velodyne> to work with the Velodyne HDL 32E instead of the HDL-64E.
+
+Some problems exist when the rotation value equals 360.0.
+
+The HDL-32E's generic calibration file can be found within the VeloView repository here:
+
+<https://github.com/Kitware/VeloView/blob/master/share/HDL-32.xml>
 
 
 # Prerequisites
