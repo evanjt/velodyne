@@ -25,7 +25,8 @@ with open(in_file, 'rb') as f:
   for ts, buf in reader:
     eth = dpkt.ethernet.Ethernet(buf)
     data = eth.data.data.data
-    process_frame(data, 0, status, firing_data_callback)
+    if len(data) > 512:
+        process_frame(data, 0, status, firing_data_callback)
     if len(status.lasers[63].values) > 0:
       break
 
